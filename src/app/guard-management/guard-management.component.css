@@ -1,0 +1,33 @@
+
+  @import "~bootstrap/dist/css/bootstrap.css";
+
+.nav-link {
+    padding: 10px 25px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 15px;
+  }
+  
+  .nav-link:hover {
+    background-color: #6495ed;
+  }
+
+
+
+
+.hoverwell:hover{
+    background-color:cornflowerblue;
+    cursor: pointer;
+}
+
+.well{
+    background-color:rgb(73, 73, 122);
+}
+
+.container{
+    padding-top: 10px;
+}
+body.container{
+    background-color:rgb(163, 158, 190);
+    /* background-image:url("assets/pic2.jpg"); */
+}

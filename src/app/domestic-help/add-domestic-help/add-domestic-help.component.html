@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <h1 style="text-align: center;"><u>Add Domestic Help</u></h1>
+    <body style="background-image: url('./assets/apartemnt 1.jpg');" >
+        <div class="container pt-3"> 
+            <hr/>
+            <div  class= "row row-cols-2">
+             <div class="col-md-6">
+  <form [formGroup]="newHelpForm" autocomplete="on" novalidate (ngSubmit)="addHelp(newHelpForm.value)">
+  <div class="form-group" >
+    <label for="flatNo">Flat Number:</label>
+    <em *ngIf="newHelpForm.controls.flatNo?.invalid && (newHelpForm.controls.flatNo?.touched)"><h4>Required</h4></em>
+        <input  id="flatNo" required type="text" required class="form-control" formControlName="flatNo"  (ngModel)=dom?.flatNo placeholder="Flat Number..." />
+  </div>
+  <div class="form-group" >
+  <em *ngIf="newHelpForm.controls.ownerName?.invalid && (newHelpForm.controls.ownerName?.touched)"><h4>Required</h4></em>
+    <label for="ownerName">Owner Name</label>
+      <input id="ownerName" required type="text" class="form-control" formcontrolName="ownerName" (ngModel)=dom?.ownerHelp placeholder="Owner Name Of Flat..." />
+  </div>
+  <div class="form-group" >
+    <label for="name">Name:</label>
+    <em *ngIf="newHelpForm.controls.name?.invalid && (newHelpForm.controls.name?.touched)"><h4>Required</h4></em>
+    <input  id="name"  required type="text" class="form-control" formControlName="name" (ngModel)=dom?.name placeholder="Name of Helper..." />
+  </div>
+  <div class="form-group" >
+    <label for="helpType">Help Type:</label>
+    <em *ngIf="newHelpForm.controls.helpType?.invalid && (newHelpForm.controls.helpType?.touched)"><h4>Required</h4></em>
+       <input   id="helpType" required type="text" class="form-control" formControlName="helpType" (ngModel)=dom?.helpType placeholder="Help Type..." />
+  </div>
+  <div class="form-group" >
+  <label for="arrivalTime">Arrival Timings:</label>
+  <em *ngIf="newHelpForm.controls.arrivalTime?.invalid && (newHelpForm.controls.arrivalTime?.touched)"><h4>Required</h4></em>
+     <input   id="arrivalTime" required type="text" class="form-control" formControlName="arrivalTime" (ngModel)=dom?.arrivalTime placeholder="Arrival Time of Helper..." />
+    </div>
+        <div class="form-group" >
+    <label for="departureTime">Departure Timings:</label>
+    <em *ngIf="newHelpForm.controls.departureTime?.invalid && (newHelpForm.controls.departureTime?.touched)">Required</em>
+   <input   id="departureTime" required type="text" class="form-control" formControlName="departureTime" (ngModel)=dom?.departureTime placeholder="Departure Time of Helper..." />
+    </div>
+    <div class="form-group" >
+    <label for="dat">Date :</label>
+    <em *ngIf="newHelpForm.controls.dat?.invalid && (newHelpForm.controls.dat?.touched)">Required</em>
+   <input   id="dat" required type="text" class="form-control" formControlName="dat" (ngModel)=dom?.dat placeholder="Date of Help..." />
+    </div>
+  <button type="submit"  [disabled]=newHelpForm.invalid class="btn btn-primary">Save</button>
+  <button type="button"   class="btn btn-primary" (click)="cancel()">Cancel</button>
+  </form>
+  </div>
+  </div>
+  </div>
+  </body>
+</html>

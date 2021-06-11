@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <h1 style="text-align: center;"><u>Security By ID</u></h1>
+    <body style="background-image: url('./assets/security image.jpg');" >
+        <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage?.error?.details | json}}</div>
+        <div class="container pt-3"> 
+            <hr/>
+            <div  class= "row row-cols-2">
+                 <div *ngIf="secur" class="well hoverwell thumbnail py-3 my-3"> 
+                   <hr/>
+                   <h3> <div >Message ID:{{secur?.msgId}}<br/>
+                    Message: {{secur?.message}} <br/>
+                     Alert: {{secur?.alert}} <br/>
+                    </div></h3>
+                     <button class="btn btn-primary" (click)="deleteSecurity(secur?.msgId)">delete</button><br/>
+                     <button class="btn btn-primary" (click)="updateSecurity(secur?.msgId)">Update</button>
+                    <!-- </div> --->
+                   </div>  
+             <!-- <child [childData]=domHelp></child>   -->
+            </div>
+            </div> 
+            <!-- </div>
+            </div> -->
+    </body>
+</html>

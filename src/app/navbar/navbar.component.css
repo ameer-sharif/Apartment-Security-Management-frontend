@@ -1,0 +1,3 @@
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(82, 162, 194);
+  }
