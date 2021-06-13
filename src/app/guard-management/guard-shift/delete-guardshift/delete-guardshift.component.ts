@@ -25,7 +25,7 @@ guard: GuardShift
     console.log(guarddata)
     this.guardService.DeleteGuardShift(guarddata).subscribe(data => this.guard = data);
     console.log("deleted");
-    this.router.navigate(['/guard-management/GuardShift']);
+    this.router.navigate(['/navbar/guard-management/GuardShift']);
   }
   
 }

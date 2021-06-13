@@ -21,13 +21,13 @@ export class SecurityByIdComponent implements OnInit {
                                                                                                 (error)=>{this.errorMessage=error},  ); // Capture id from URL and passit to service
     }   
     updateSecurity(msgId:String){
-        this.router.navigateByUrl("/securityM/updateSecure/"+msgId)
+        this.router.navigateByUrl("/navbar/securityM/updateSecure/"+msgId)
     }
 
     deleteSecurity(msgId:String){
         console.log(msgId);
         this.securityService.deleteSecurity(msgId).subscribe(data => this.secur=data);
-        this.router.navigate(['/securityM/security']);
+        this.router.navigate(['/navbar/securityM/security']);
       }
 
     

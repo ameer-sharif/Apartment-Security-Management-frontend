@@ -57,7 +57,7 @@ import { FlatRentService } from 'src/app/service/flatrent.service';
   styles: ['em{float:right; color: #E05c65; padding-left-10px;}']
 }
 )
-export class CreateFlatRentComponent implements  OnInit{
+export class AddFlatRentComponent implements  OnInit{
 
   
   private rent: crent;
@@ -86,14 +86,14 @@ export class CreateFlatRentComponent implements  OnInit{
 
   addFlat(newFlat: crent) {
     this.flatrentService.addFlatRent(newFlat).subscribe(flat => this.rent = flat);
-    this.router.navigate(['./flat-management/flatrent/rents'])
+    this.router.navigate(['/navbar/flat-management/flatrent/rents'])
     console.log(newFlat)
   }
 
  
 
   cancel() {
-    this.router.navigate(['./flat-management/flatrent/rents'])
+    this.router.navigate(['/navbar/flat-management/flatrent/rents'])
   }
 
 

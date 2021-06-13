@@ -29,7 +29,7 @@ vdata: cvehicle
     console.log(vehicledata)
     this.vehicleService.deleteVehicle(vehicledata).subscribe(data => this.vdata = data);
     console.log("deleted");
-    this.router.navigate(['./vehicle-management/vehicle']);
+    this.router.navigate(['/navbar/vehicle-management/vehicle']);
   }
   
 }

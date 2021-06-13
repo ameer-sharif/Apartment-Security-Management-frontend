@@ -96,7 +96,7 @@ export class UpdateGuardTrainComponent implements OnInit {
   updateGuardTrain(guard){
     console.log("***");
        this.guardService.updateGuardTrain(this.guard).subscribe(pipe());
-       this.router.navigate(['/guard-management/GuardTraining']);
+       this.router.navigate(['/navbar/guard-management/GuardTraining']);
   }
 
   

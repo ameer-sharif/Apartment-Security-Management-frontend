@@ -20,6 +20,8 @@ import { cflat } from 'src/app/model/flat.model';
       </div>
   </div>
 </div>`,
+
+styleUrls: ['./all-flats.component.css']
 })
 export class DisplayFlatsComponent {
   @Input() flatdata: cflat[];  // property receiving the data from parent using property binding

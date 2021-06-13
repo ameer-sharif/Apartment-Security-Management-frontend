@@ -14,20 +14,16 @@ import { GuardService } from './service/guard.service';
 import { DomesticService } from './service/domestichelp.service';
 import { SecurityService } from './service/security.service';
 import { NgxPaginationModule } from 'ngx-pagination';
-
-
-
-
-
-
-
+import { VisitorService } from './service/visitor.service';
+import { UserService } from './service/user.service';
+import { AdminService } from './service/admin.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponent,
-    NavbarComponent,   
+    NavbarComponent,
     
     
   ],
@@ -49,6 +45,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     GuardService,
     DomesticService,
     SecurityService,
+    VisitorService,
+    UserService,
+    AdminService,
   
   
   ],

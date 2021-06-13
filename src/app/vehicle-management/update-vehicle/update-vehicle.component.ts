@@ -103,7 +103,7 @@ export class UpdateVehicleComponent implements OnInit {
   updateVehicle(vehi: cvehicle){
     console.log("*update**");
        this.vehicleService.updateVehicle(vehi).subscribe(vehicle => this.vehi = vehicle);
-       this.router.navigate(['./vehicle-management/vehicle']);
+       this.router.navigate(['/navbar/vehicle-management/vehicle']);
 
 
       

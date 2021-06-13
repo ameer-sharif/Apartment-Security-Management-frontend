@@ -84,7 +84,7 @@ export class UpdateDeliveryComponent implements OnInit {
   }
   updateDelivery(delivery) {
     this.deliveryService.updateDelivery(delivery).subscribe(delivery => this.delivery= delivery);
-    this.router.navigate(['./delivery-management/deliveries']);
+    this.router.navigate(['/navbar/delivery-management/deliveries']);
   }
 
 }

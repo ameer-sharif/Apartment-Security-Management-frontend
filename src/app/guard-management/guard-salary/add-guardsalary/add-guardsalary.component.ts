@@ -45,7 +45,7 @@ import { GuardService } from 'src/app/service/guard.service';
           <div class="form-group" >
             <label for="date">date:</label>
             <em *ngIf="newGuardSalaryForm.controls.date?.invalid && (newGuardSalaryForm.controls.date?.touched)">Required</em>
-            <input  id="date"  required type="text" class="form-control" formControlName="date" (ngModel)=guardSalary.date placeholder="Enter date..." />
+            <input  id="date"  required type="date" class="form-control" formControlName="date" (ngModel)=guardSalary.date placeholder="Enter date..." />
           </div>
   
           
@@ -66,7 +66,7 @@ import { GuardService } from 'src/app/service/guard.service';
   
     addGuardSalary(newGuardSalary) {
       this.guardService.addGuardSalary(newGuardSalary).subscribe(guard => this.guardSalary = guard);
-      this.router.navigate(['/guard-management/GuardSalary'])
+      this.router.navigate(['/navbar/guard-management/GuardSalary'])
       console.log(newGuardSalary)
     }
   
@@ -89,7 +89,7 @@ import { GuardService } from 'src/app/service/guard.service';
    
   
     cancel() {
-      this.router.navigate(['/guard-management/GuardSalary'])
+      this.router.navigate(['/navbar/guard-management/GuardSalary'])
     }
   
   }

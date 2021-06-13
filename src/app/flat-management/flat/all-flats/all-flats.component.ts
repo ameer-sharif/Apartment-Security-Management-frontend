@@ -21,6 +21,7 @@ import { FlatService } from 'src/app/service/flat.service';
                 <pagination-controls (pageChange)="p=$event"></pagination-controls>
                 </footer>
                 `
+                
 
   
   })

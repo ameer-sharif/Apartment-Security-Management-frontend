@@ -21,7 +21,7 @@ import { FlatRentService } from 'src/app/service/flatrent.service';
               <div>AMOUNT : {{flatrent?.amount | titlecase}} </div>
               <div> FLAT TYPE : {{flatrent?.flatType | titlecase}} </div>
               <div>
-              <button class="btn btn-danger " type="submit" (click)="deleteflat(flatrent.userId)" onclick="myFunction()" > DELETE 
+              <button class="btn btn-danger " type="submit" (click)="deleteflat(flatrent.userId)" > DELETE 
               </button>
               </div>
             </div>
@@ -62,12 +62,9 @@ export class DeleteFlatRentComponent implements OnInit {
     deleteflat(userId: number){
       console.log("************ delete*********");
       this.flatrentService.deleteflatRent(userId).subscribe(data => this.delete= data);
-      this.router.navigate(['/flat-management/flatrent/rents']);
+      this.router.navigate(['/navbar/flat-management/flatrent/rents']);
     }
 
-    myFunction() {
-      alert("successfully deleted "+crent);
-    }
   
 
   

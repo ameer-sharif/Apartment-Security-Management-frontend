@@ -31,7 +31,7 @@ guard: IGuard
     console.log(guarddata)
     this.guardService.DeleteGuard(guarddata).subscribe(data => this.guard = data);
     console.log("deleted");
-    this.router.navigate(['/guard-management/GuardTraining']);
+    this.router.navigate(['/navbar/guard-management/GuardTraining']);
   }
   
 }

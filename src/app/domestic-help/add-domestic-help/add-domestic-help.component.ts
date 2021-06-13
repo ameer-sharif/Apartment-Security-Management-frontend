@@ -39,11 +39,11 @@ import { DomesticService } from 'src/app/service/domestichelp.service';
     addHelp(newHelp) {
       console.log("Add method called**********")
       this.domesticService.addHelp(newHelp).subscribe(dom => this.dom = dom);
-      this.router.navigate(['./domestic-help/domHelp'])
+      this.router.navigate(['/navbar/domestic-help/domHelp'])
       console.log(newHelp)
     }
   
     cancel() {
-      this.router.navigate(['./domestic-help/domHelp'])
+      this.router.navigate(['/navbar/domestic-help/domHelp'])
     }
   }

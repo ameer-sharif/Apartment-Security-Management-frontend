@@ -1,3 +1,31 @@
-/* body{
-    background-color:brown
-} */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+
+
+.hoverwell:hover{
+    background-color:cornflowerblue;
+    cursor: pointer;
+}
+
+.well{
+    background-color:khaki;
+}
+
+.container{
+    padding-top: 10px;
+}
+
+
+
+.form{
+
+    display:inline-table;
+    text-align: right;
+
+}
+
+.form.container{
+    background-color: bisque;
+} 
+ 

@@ -20,7 +20,7 @@ import { GuardService } from 'src/app/service/guard.service';
 
       <div class="row">
       <div class="col-md-1">
-      <button class="btn btn-primary" title="delete Shift"  [routerLink]="['/guard-management/GuardShift/delete',guardShift?.userId]">Delete</button>
+      <button class="btn btn-primary" title="delete Shift"  [routerLink]="['/navbar/guard-management/GuardShift/delete',guardShift?.userId]">Delete</button>
       
       </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <div class="col-md-1">
@@ -45,7 +45,7 @@ export class GuardShiftByIdComponent {
   }
 
   updateGuardShift(fid){
-    this.router.navigateByUrl("/guard-management/GuardShift/update/"+fid)
+    this.router.navigateByUrl("/navbar/guard-management/GuardShift/update/"+fid)
 }
 
 

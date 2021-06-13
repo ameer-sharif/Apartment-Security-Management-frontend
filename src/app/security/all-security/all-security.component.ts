@@ -23,7 +23,7 @@ export class AllSecurityComponent implements OnInit {
 
     onButtonClick(mid:String){
         console.log("Butoon clicked ******")
-        this.router.navigate(['./securityM/secureById/'+mid]);
+        this.router.navigate(['/navbar/securityM/secureById/'+mid]);
       }
   
     

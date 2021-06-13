@@ -1,0 +1,42 @@
+<form #loginForm = "ngForm" novalidate (ngSubmit)=validation()>
+  <div id="img">
+      <div id="login" class="container"  >
+        <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6">
+              <div id="login-box" class="col-md-12">
+                  
+                <h3 class="text-center text-info">Login</h3>
+                    <div class="form-group">
+                        <label for="username" class="text-info">User Email Id:</label><br>
+                      
+        <input #uname name="emailId" type="text" placeholder="Enter username" [(ngModel)] = userData.emailId required></div>
+        <em id="errName" style="color:  rgb(4, 27, 22); font-size: large;"></em>
+        <em *ngIf="loginForm.controls.emailId?.invalid && (loginForm.controls.emailId?.touched)" style="font-size: medium; color:  rgb(43, 39, 39)"> Username can't be empty</em>
+        
+        <div><label for="password" class="text-info">Password:</label><br>
+        <input #pass name="password" type="password" placeholder="Enter password"  [(ngModel)] =userData.password  required ></div>
+        <em div id="errPass" style="color: rgb(26, 68, 85); font-size: large; "></em>
+        <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched)" style="font-size: medium; color:  rgb(43, 40, 40)"> Passwordcan't be empty</em>
+      <br/>
+      <br/>
+      
+            <button type="submit"class="btn btn-primary">Login</button>
+        
+            <button type="reset"class="btn btn-primary" style="margin-left: 2%;" >Reset</button>
+    
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</form>
+  
+
+  <!-- {{userData.username |json}}
+  {{userData |json}} -->
+    <!-- <div *ngFor = "let admin of userData">
+      {{admin.username}}
+    </div> -->
+
+
+

@@ -61,12 +61,12 @@ export class UpdateSecurityComponent implements OnInit{
 
   updateSecurity(secur){
        this.securityService.updateSecurity(secur).subscribe(pipe());
-       this.router.navigate(['/securityM/security']);
+       this.router.navigate(['/navbar/securityM/security']);
   }
 
   
   cancel() {
-    this.router.navigate(['/securityM/security'])
+    this.router.navigate(['/navbar/securityM/security'])
   }
 
 

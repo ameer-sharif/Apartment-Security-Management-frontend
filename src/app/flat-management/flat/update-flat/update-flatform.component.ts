@@ -97,11 +97,11 @@ export class UpdateFlatFormComponent implements OnInit {
   updateFlat(newFlat: cflat){
     console.log("********** update *********")
        this.flatService.updateFlat(newFlat).subscribe(flat => this.flats = flat);
-       this.router.navigate(['/flat-management/flat/update']);
+       this.router.navigate(['/navbar/flat-management/flat/update']);
   }
 
   cancel() {
-    this.router.navigate(['/flat-management/flat/update'])
+    this.router.navigate(['/navbar/flat-management/flat/update'])
   }
 }
 

@@ -23,12 +23,12 @@ export class DomesticComponent implements OnInit{
       onButtonClick(id:String){
         console.log("Butoon clicked ******")
         // this.router.navigateByUrl('/domHelp/:{{domestic.flatId}}')
-       this.router.navigate(['/domestic-help/domHelp/'+id]);
+       this.router.navigate(['/navbar/domestic-help/domHelp/'+id]);
       }
 
       onButtonClick1(name:String){
         console.log("Butoon clicked ******")
-       this.router.navigate(['/domestic-help/domHelp/nam/'+name]);
+       this.router.navigate(['/navbar/domestic-help/domHelp/nam/'+name]);
       }
 
     constructor(private domesticService:DomesticService,private router:Router){

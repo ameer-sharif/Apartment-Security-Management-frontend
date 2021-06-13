@@ -12,11 +12,11 @@ import { Component,Input,Output, EventEmitter} from '@angular/core';
       <div>STATUS : {{guarddata?.status | titlecase}} </div>
       <div>TIMEING : {{guarddata?.timeing | titlecase}} </div>
       <div>
-          <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/guard-management/GuardTraining/userId',guarddata.userId]"> View By Id</button></span>
+          <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/navbar/guard-management/GuardTraining/userId',guarddata.userId]"> View By Id</button></span>
       </div>
 
       <div>
-      <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/guard-management/GuardTraining/name',guarddata.name]"> View By Name</button></span>
+      <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/navbar/guard-management/GuardTraining/name',guarddata.name]"> View By Name</button></span>
   </div>
   </div>
 </div>`,

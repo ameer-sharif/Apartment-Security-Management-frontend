@@ -60,7 +60,7 @@ ngOnInit(){
 
 }
     updateflat(fid){
-        this.router.navigateByUrl("/flat-management/flat/update/"+fid)
+        this.router.navigateByUrl("/navbar/flat-management/flat/update/"+fid)
     }
 
 

@@ -30,7 +30,7 @@ import { GuardService } from 'src/app/service/guard.service';
         <div class="form-group" >
           <label for="date">Date:</label>
           <em *ngIf="(newGuardTrainForm.controls.date?.invalid) && (newGuardTrainForm.controls.date?.touched)">Required</em>
-              <input  id="date" required type="string"   class="form-control" formControlName="date"  (ngModel)=guardTrain.date placeholder="Enter Date..." />
+              <input  id="date" required type="date"   class="form-control" formControlName="date"  (ngModel)=guardTrain.date placeholder="Enter Date..." />
         </div>
 
         <div class="form-group" >
@@ -71,7 +71,7 @@ export class AddGuardTrainComponent implements OnInit {
 
   addGuardTrain(newGuardTrain) {
     this.guardService.addGuardTrain(newGuardTrain).subscribe(guard => this.guardTrain = guard);
-    this.router.navigate(['/guard-management/GuardTraining'])
+    this.router.navigate(['/navbar/guard-management/GuardTraining'])
     console.log(newGuardTrain)
   }
 
@@ -95,7 +95,7 @@ export class AddGuardTrainComponent implements OnInit {
  
 
   cancel() {
-    this.router.navigate(['/guard-management/GuardTraining'])
+    this.router.navigate(['/navbar/guard-management/GuardTraining'])
   }
 
 }

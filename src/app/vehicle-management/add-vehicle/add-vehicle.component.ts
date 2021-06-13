@@ -93,12 +93,12 @@ export class AddVehicleComponent implements OnInit {
 
   addVehicle(newVehicle) {
     this.vehicleService.addVehicle(newVehicle).subscribe(vehicle => this.vehicle = vehicle);
-    this.router.navigate(['./vehicle-management/vehicle'])
+    this.router.navigate(['/navbar/vehicle-management/vehicle'])
     console.log(newVehicle)
     }
 
   cancel() {
-    this.router.navigate(['./vehicle-management/vehicle'])
+    this.router.navigate(['/navbar/vehicle-management/vehicle'])
   }
 
 }

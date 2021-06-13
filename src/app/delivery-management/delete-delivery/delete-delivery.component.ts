@@ -25,7 +25,7 @@ export class DeleteDeliveryComponent implements OnInit {
     console.log(deliveryId);
     this.deliveryService.deleteDelivery(deliveryId).subscribe(data =>this.delete= data);
     console.log("deleted");
-    this.router.navigate(['./delivery-management/deliveries']);
+    this.router.navigate(['/navbar/delivery-management/deliveries']);
   }
  
 

@@ -69,7 +69,7 @@ import { DeliveryService } from 'src/app/service/delivery.service';
   
     addDelivery(newdelivery) {
       this.deliveryService.addDelivery(newdelivery).subscribe(delivery => this.delivery=delivery);
-      this.router.navigate(['./delivery-management/deliveries']);
+      this.router.navigate(['/navbar/delivery-management']);
       console.log(newdelivery);
     }
   
@@ -77,7 +77,7 @@ import { DeliveryService } from 'src/app/service/delivery.service';
   
   
     cancel() {
-      this.router.navigate(['./delivery-management/deliveries'])
+      this.router.navigate(['/navbar/delivery-management'])
     }
   
   

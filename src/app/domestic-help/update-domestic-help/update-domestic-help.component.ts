@@ -1,15 +1,9 @@
-
-
-
   import { Component, OnInit } from '@angular/core';
   import { FormsModule,FormGroup,FormControl } from '@angular/forms';
   import { ActivatedRoute, Router } from '@angular/router';
   import { pipe } from 'rxjs';
 import { DomesticHelp } from 'src/app/Model/DomesticHelp.model';
 import { DomesticService } from 'src/app/service/domestichelp.service';
-  
-  
-  
   
   @Component({
     selector: 'update-Help',
@@ -93,11 +87,11 @@ import { DomesticService } from 'src/app/service/domestichelp.service';
   
     updateHelp(domHelp){
          this.domesticService.updateHelp(domHelp).subscribe(pipe());
-         this.router.navigate(['/domestic-help/domHelp']);
+         this.router.navigate(['/navbar/domestic-help/domHelp']);
     }
   
     
     cancel() {
-      this.router.navigate(['/domestic-help/domHelp'])
+      this.router.navigate(['/navbar/domestic-help/domHelp'])
     }
   }

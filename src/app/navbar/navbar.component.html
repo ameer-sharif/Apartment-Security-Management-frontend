@@ -18,13 +18,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['']"
-              >ASM <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['/guard-management']">Guard Management</a>
+          
+          
+          <li class="nav-item px-1">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./guard-management']">Guard Management</a>
           </li>
 
           <!-- <li class="nav-item dropdown px-2"  id="pills-home-tab" data-toggle="pill">
@@ -47,14 +44,14 @@
               
             </div>
           </li> -->
-          <li class="nav-item px-2">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['/delivery-management']">Delivery Management</a>
+          <li class="nav-item px-1">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./delivery-management']">Delivery Management</a>
           </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['/vehicle-management']">Vehicle Management</a>
+          <li class="nav-item px-1">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./vehicle-management']">Vehicle Management</a>
           </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['/flat-management']">Flat Management</a>
+          <li class="nav-item px-1">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./flat-management']">Flat Management</a>
           </li>
           <!-- <li class="nav-item dropdown px-2"  id="pills-home-tab" data-toggle="pill">
             <a
@@ -76,23 +73,42 @@
             </div>
           </li> -->
           
-          <li class="nav-item px-2">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['/visitor-management']">Visitor Management</a>
+          <li class="nav-item px-1">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./visitor-management']">Visitor Management</a>
           </li>
 
-          <li class="nav-item px-2">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['/domestic-help']">Domestic Help</a>
+          <li class="nav-item px-1">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./domestic-help']">Domestic Help</a>
           </li>
 
-          <li class="nav-item px-2">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['/securityM']">Security</a>
+          <li class="nav-item px-1">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./securityM']">Security</a>
           </li>
-        </ul>
+        
+
+        <li class="nav-item px-1">
+          <a class="nav-link" id="pills-home-tab" data-toggle="pill" [routerLink]="['./user-management']">User Management</a>
+        </li>
+     
           
-          <button class="btn btn-outline-success " type="submit"  [routerLink]="['/login']"> LOGIN 
+          <!-- <button class="btn btn-outline-success " type="submit"  [routerLink]="['/login']"> LOGIN 
+          </button> -->
+          
+        <!--   <li class="nav-item active">
+            <a class="nav-link" (click)=Logout()> Logout <span class="sr-only">(current)</span></a>
+          </li> -->
+          <li>
+          <button class="btn btn-danger" style="margin-left: 10%;" type="submit" (click)=Logout() > LOGOUT
           </button>
+        </li>
+        </ul>
+       
+
+
         
       </div>
     </nav>
+
+    <router-outlet></router-outlet>
  
 

@@ -27,11 +27,11 @@ import { DomesticService } from 'src/app/service/domestichelp.service';
     deleteHelp(flatNo:String){
       console.log(flatNo);
       this.domesticService.deleteHelp(flatNo).subscribe(data => this.domHelp=data);
-      this.router.navigate(['/domestic-help/domHelp']);
+      this.router.navigate(['/navbar/domestic-help/domHelp']);
     }
   
     updateHelp(flatNo:String){
-      this.router.navigateByUrl("/domestic-help/update/"+flatNo)
+      this.router.navigateByUrl("/navbar/domestic-help/update/"+flatNo)
   }
     
   

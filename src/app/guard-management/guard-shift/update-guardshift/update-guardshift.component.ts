@@ -36,7 +36,7 @@ import { GuardService } from 'src/app/service/guard.service';
 <div class="form-group" >
 <label for="date">date: </label>
 <em *ngIf="(newGuardForm.controls.date?.invalid) && (newGuardForm.controls.date?.touched)">Required</em>
-    <input  id="date" required type="text" class="form-control" formControlName="date"  [(ngModel)]=guard.date placeholder="Enter date..." />
+    <input  id="date" required type="date" class="form-control" formControlName="date"  [(ngModel)]=guard.date placeholder="Enter date..." />
 </div>
 
   <button type="submit"  [disabled]=newGuardForm.invalid class="btn btn-primary">Update</button>
@@ -80,6 +80,6 @@ export class UpdateGuardShiftComponent implements OnInit {
   updateGuardShift(guard){
     console.log("***");
        this.guardService.updateGuardShift(this.guard).subscribe(pipe());
-       this.router.navigate(['/guard-management/GuardShift']);
+       this.router.navigate(['/navbar/guard-management/GuardShift']);
   }
 }

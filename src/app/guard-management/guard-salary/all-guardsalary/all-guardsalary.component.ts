@@ -13,11 +13,11 @@
         <div>STATUS : {{guarddata?.status | titlecase}} </div>
         <div>DATE : {{guarddata?.date | titlecase}} </div>
         <div>
-            <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/guard-management/GuardSalary/userId',guarddata.userId]"> View By Id</button></span>
+            <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/navbar/guard-management/GuardSalary/userId',guarddata.userId]"> View By Id</button></span>
         </div>
   
         <div>
-        <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/guard-management/GuardSalary/name',guarddata.name]"> View By Name</button></span>
+        <span> <button [class]=buttonStyle (click)="onButtonClick()" [routerLink]="['/navbar/guard-management/GuardSalary/name',guarddata.name]"> View By Name</button></span>
     </div>
     </div>
   </div>`,

@@ -22,7 +22,7 @@ import { GuardService } from 'src/app/service/guard.service';
 
       <div class="row">
       <div class="col-md-1">
-      <button class="btn btn-primary" title="delete GuardTrain"  [routerLink]="['/guard-management/GuardTraining/delete',guard?.userId]">Delete</button>
+      <button class="btn btn-primary" title="delete GuardTrain"  [routerLink]="['/navbar/guard-management/GuardTraining/delete',guard?.userId]">Delete</button>
       
       </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <div class="col-md-1">
@@ -48,7 +48,7 @@ export class GuardTrainByIdComponent {
   }
 
   updateGuardTrain(fid){
-    this.router.navigateByUrl("/guard-management/GuardTraining/update/"+fid)
+    this.router.navigateByUrl("/navbar/guard-management/GuardTraining/update/"+fid)
 }
 
 

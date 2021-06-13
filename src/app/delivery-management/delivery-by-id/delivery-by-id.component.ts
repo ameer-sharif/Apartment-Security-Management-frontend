@@ -30,7 +30,7 @@ import { DeliveryService } from 'src/app/service/delivery.service';
   <td>{{delivery?.date | date:'mediumDate'}}</td>
   <td>{{delivery?.status1}}</td>
   <td>
-  <button class="btn btn-primary" [routerLink]="['/delivery-management/deliveries',delivery?.deliveryId]">Delete</button>
+  <button class="btn btn-primary" [routerLink]="['/navbar/delivery-management/deliveries',delivery?.deliveryId]">Delete</button>
   <button class="btn btn-primary" (click)="updateDelivery(delivery.deliveryId)">Update</button>
   
   </td>
@@ -57,7 +57,7 @@ export class DeliveryByIdComponent {
   }
 
   updateDelivery(did){
-    this.router.navigateByUrl("./delivery-management/updatedelivery/"+did);
+    this.router.navigateByUrl("/navbar/delivery-management/updatedelivery/"+did);
   }
 
   // deleteDelivery(deliveryId : number){

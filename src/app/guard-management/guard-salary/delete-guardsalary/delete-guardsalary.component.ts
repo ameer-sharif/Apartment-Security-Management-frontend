@@ -25,7 +25,7 @@ guard: GuardSalary
     console.log(guarddata)
     this.guardService.DeleteGuardSalary(guarddata).subscribe(data => this.guard = data);
     console.log("deleted");
-    this.router.navigate(['/guard-management/GuardSalary']);
+    this.router.navigate(['/navbar/guard-management/GuardSalary']);
   }
   
 }

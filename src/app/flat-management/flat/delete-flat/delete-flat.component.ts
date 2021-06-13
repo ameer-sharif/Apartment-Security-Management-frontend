@@ -70,7 +70,7 @@ export class DeleteFlatComponent implements OnInit {
     deleteflat(userId: number){
       console.log("************ delete*********");
       this.flatService.Deleteflat(userId).subscribe(data => this.delete= data);
-      this.router.navigate(['./flat-management/flat/flats']);
+      this.router.navigate(['/navbar/flat-management/flat/flats']);
     }
 
     myFunction() {

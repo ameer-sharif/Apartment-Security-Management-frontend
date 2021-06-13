@@ -30,12 +30,12 @@ export class AddSecurityComponent implements OnInit {
     addSecure(secure) {
       console.log("Add method called**********")
       this.securityService.addSecurity(secure).subscribe(sec => this.sec = sec);
-      this.router.navigate(['/securityM/security'])
+      this.router.navigate(['/navbar/securityM/security'])
       console.log(secure)
     }
   
     cancel() {
-      this.router.navigate(['/securityM/security'])
+      this.router.navigate(['/navbar/securityM/security'])
     }
 
 

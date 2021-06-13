@@ -15,7 +15,7 @@ import { FlatRentService } from 'src/app/service/flatrent.service';
   <div  class = "container" style="width:550px; background-color: pink"> 
   <div class="col-md-6">
  
-  <form [formGroup]="updateForm" autocomplete="off" novalidate (ngSubmit)="updateFlat(updateForm.value)">
+  <form [formGroup]="updateForm" autocomplete="off" novalidate (ngSubmit)="updateFlatRent(updateForm.value)">
 
   <div class="form-group" >
           <label for="userId">User Id:</label>
@@ -98,14 +98,14 @@ export class UpdateFlatRentFormComponent implements OnInit {
 
 
 
-  updateFlat(newFlat: crent){
+  updateFlatRent(newFlat: crent){
     console.log("********** update *********")
        this.flatrentService.updateFlatRent(newFlat).subscribe(flat => this.flats = flat);
-       this.router.navigate(['/flat-management/flatrent/update']);
+       this.router.navigate(['/navbar/flat-management/flatrent/update']);
   }
 
   cancel() {
-    this.router.navigate(['./flat-management/flatrent/update'])
+    this.router.navigate(['/navbar/flat-management/flatrent/update'])
   }
 }
 

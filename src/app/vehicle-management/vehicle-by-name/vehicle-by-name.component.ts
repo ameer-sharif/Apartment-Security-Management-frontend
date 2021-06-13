@@ -24,7 +24,7 @@ import { VehicleService } from 'src/app/service/vehicle.service';
 
       <div class="row">
       <div class="col-md-1">
-      <button class="btn btn-primary" title="delete vehicle"  [routerLink]="['/vehicle-management/deletevehicle',vehicledata?.name]">Delete</button>
+      <button class="btn btn-primary" title="delete vehicle"  [routerLink]="['/navbar/vehicle-management/deletevehicle',vehicledata?.name]">Delete</button>
       
       </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <div class="col-md-1">
@@ -55,7 +55,7 @@ export class VehicleByNameComponent implements OnInit{
     }
 
     updateVehicle(vname){
-      this.router.navigateByUrl("/vehicle-management/updateVehicle/"+vname)
+      this.router.navigateByUrl("/navbar/vehicle-management/updateVehicle/"+vname)
   }
 
 

@@ -85,14 +85,14 @@ export class AddFlatComponent implements OnInit {
 
   addFlat(newFlat: cflat) {
     this.flatService.addFlat(newFlat).subscribe(flat => this.flat = flat);
-    this.router.navigate(['./flat-management/flat/flats'])
+    this.router.navigate(['/navbar/flat-management/flat/flats'])
     console.log(newFlat)
   }
 
  
 
   cancel() {
-    this.router.navigate(['./flat-management/flat/flats'])
+    this.router.navigate(['/navbar/flat-management/flat/flats'])
   }
 
 
