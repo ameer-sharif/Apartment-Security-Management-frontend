@@ -1,0 +1,25 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+.ng-valid.ng-dirty:not(form) {
+  border: solid 2px lightgreen;
+}
+
+.ng-invalid.ng-dirty:not(form),
+.ng-invalid:not(form).form-submitted {
+  border: solid 2px rgb(66, 66, 66);
+}
+
+body {
+  background-image: url("/assets/flat-management/flat3.jpeg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+h3,
+label {
+  color: white;
+}
+
+hr {
+  background-color: white;
+}

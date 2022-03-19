@@ -7,6 +7,7 @@ import { GuardService } from 'src/app/service/guard.service';
 @Component({
   selector: 'guardshiftbyname',
   template: `
+  <body style="background-color:#C0C0C0">
   <div *ngIf="errorMessage" class="alert alert-danger">
   {{errorMessage?.error?.error | json}}
   </div>
@@ -18,7 +19,8 @@ import { GuardService } from 'src/app/service/guard.service';
 
 
   </div>
-</div>`
+</div>
+</body>`
 
 })
 export class GuardShiftByNameComponent {

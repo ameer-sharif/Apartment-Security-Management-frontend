@@ -1,31 +1,31 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-
-
-
-.hoverwell:hover{
-    background-color:cornflowerblue;
-    cursor: pointer;
+body {
+  background-color: rgb(223, 223, 198);
 }
 
-.well{
-    background-color:khaki;
+.hoverwell:hover {
+  background-color: cornflowerblue;
+  cursor: pointer;
 }
 
-.container{
-    padding-top: 10px;
+.well {
+  background-color: khaki;
 }
 
-
-
-.form{
-
-    display:inline-table;
-    text-align: right;
-
+.container {
+  padding-top: 10px;
 }
 
-.form.container{
-    background-color: bisque;
-} 
- 
+.form {
+  display: inline-table;
+  text-align: right;
+}
+
+.form.container {
+  background-color: bisque;
+}
+
+a {
+  color: white;
+}

@@ -3,7 +3,7 @@ import { Component,Input,Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'allguardtrain',
-  template:`<div>
+  template:`<div >
   <div class="well hoverwell thumbnail py-3 my-3">
       <div > USER ID : {{guarddata?.userId}} </div>
       <div>GUARD TRAINIE NAME : {{guarddata?.name | titlecase}} </div>

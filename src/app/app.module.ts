@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlatService } from './service/flat.service';
 import { FlatRentService } from './service/flatrent.service';
@@ -17,6 +16,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { VisitorService } from './service/visitor.service';
 import { UserService } from './service/user.service';
 import { AdminService } from './service/admin.service';
+import { LoginComponent } from './login/login.component';
+
 
 
 @NgModule({
@@ -24,9 +25,9 @@ import { AdminService } from './service/admin.service';
     AppComponent,
     routingComponent,
     NavbarComponent,
-    
-    
+    LoginComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,12 +35,11 @@ import { AdminService } from './service/admin.service';
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
-
-    
   ],
+
   providers: [
     FlatService,
-    FlatRentService, 
+    FlatRentService,
     DeliveryService,
     VehicleService,
     GuardService,
@@ -48,10 +48,7 @@ import { AdminService } from './service/admin.service';
     VisitorService,
     UserService,
     AdminService,
-  
-  
   ],
-
 
   bootstrap: [AppComponent]
 })

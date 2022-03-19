@@ -7,27 +7,30 @@ import { GuardService } from 'src/app/service/guard.service';
 @Component({
   selector: 'guardshiftbyid',
   template: `
+<body style="background-color:#C0C0C0">
   <div *ngIf="errorMessage" class="alert alert-danger">
   {{errorMessage?.error?.error | json}}
   </div>
 
   <div>
-  <div *ngIf="guardShift" class="well hoverwell thumbnail py-3 my-3">
+    <div *ngIf="guardShift" class="well hoverwell thumbnail py-3 my-3">
       <div > USER ID : {{guardShift?.userId}} </div>
       <div>GUARD TRAINIE NAME : {{guardShift?.name | titlecase}} </div>
       <div>TIME : {{guardShift?.time | titlecase}} </div>
       <div>DATE : {{guardShift?.date | titlecase}} </div>
 
       <div class="row">
-      <div class="col-md-1">
-      <button class="btn btn-primary" title="delete Shift"  [routerLink]="['/navbar/guard-management/GuardShift/delete',guardShift?.userId]">Delete</button>
-      
-      </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <div class="col-md-1">
+        <button class="btn btn-danger" title="delete Shift"  [routerLink]="['/navbar/guard-management/GuardShift/delete',guardShift?.userId]">Delete</button>
+        
+        </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <div class="col-md-1">
       <button class="btn btn-primary" title="updateShift" (click)="updateGuardShift(guardShift.userId)">Update</button>
       </div>
+      </div>
+    </div>
   </div>
-</div>`
+</body>`
 
 })
 export class GuardShiftByIdComponent {

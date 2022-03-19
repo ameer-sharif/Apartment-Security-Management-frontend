@@ -7,6 +7,7 @@ import { GuardService } from 'src/app/service/guard.service';
 @Component({
   selector: 'guardtrainbyid',
   template: `
+  <body style="background-color:#C0C0C0">
   <div *ngIf="errorMessage" class="alert alert-danger">
   {{errorMessage?.error?.error | json}}
   </div>
@@ -22,14 +23,16 @@ import { GuardService } from 'src/app/service/guard.service';
 
       <div class="row">
       <div class="col-md-1">
-      <button class="btn btn-primary" title="delete GuardTrain"  [routerLink]="['/navbar/guard-management/GuardTraining/delete',guard?.userId]">Delete</button>
+      <button class="btn btn-danger" title="delete GuardTrain"  [routerLink]="['/navbar/guard-management/GuardTraining/delete',guard?.userId]">Delete</button>
       
       </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <div class="col-md-1">
       <button class="btn btn-primary" title="update GuardTrain" (click)="updateGuardTrain(guard.userId)">Update</button>
       </div>
   </div>
-</div>`
+</div>
+</div>
+</body>`
 
 })
 export class GuardTrainByIdComponent {

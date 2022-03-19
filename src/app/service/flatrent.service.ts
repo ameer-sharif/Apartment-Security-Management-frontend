@@ -40,12 +40,13 @@ export class FlatRentService {
   }
 
 
-  public getFlatRentByName(fname: string): Observable<cflat> {
+  public getFlatRentByName(fname: string): Observable<cflat[]> {
     const getbyName = `${this.base_url}/name/${fname}`;
-    return this.httpClient.get<cflat>(getbyName);
+    return this.httpClient.get<cflat[]>(getbyName);
   }
 
   public addFlatRent(newFlat: cflat): Observable<cflat> {
+    newFlat.userId=0;
     return this.httpClient.post<cflat>(this.base_url, newFlat, this.httpOptions);
   }
 

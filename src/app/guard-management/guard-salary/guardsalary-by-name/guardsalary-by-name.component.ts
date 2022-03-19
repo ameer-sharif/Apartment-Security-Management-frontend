@@ -6,14 +6,17 @@ import { GuardService } from 'src/app/service/guard.service';
 
 @Component({
   selector: 'guardsalarybyname',
-  template: `<div>
+  template: `
+  <body style="background-color:#C0C0C0">
+  <div>
   <div class="well hoverwell thumbnail py-3 my-3">
       <div>GUARD TRAINIE NAME : {{guard?.name | titlecase}} </div>
       <div>AMOUNT : {{guard?.amount}} </div>
       <div>STATUS : {{guard?.status | titlecase}} </div>
       <div>DATE : {{guard?.date | titlecase}} </div>
   </div>
-</div>`
+</div>
+</body>`
 
 })
 export class GuardSalaryByNameComponent {
